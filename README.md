@@ -13,7 +13,7 @@ Correctly generate and download a QR code when given a URL
 4. Click the button Download PNG
 5. Wait for file to download and check that content is correct
 
-Generate and download the QR code correctly when the URL is given
+Correctly generate and download a QR code when given a TEXT
 1. Go to https://www.qrcode-monkey.com/
 2. Go to Text tab
 3. Enter in the text field
