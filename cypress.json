@@ -1,0 +1,7 @@
+{
+    "baseUrl" : "https://www.qrcode-monkey.com",
+    "pageLoadTimeout": 15000,
+    "testFiles": "**/*-spec.js",
+    "projectId": "6ewgkw",
+    "trashAssetsBeforeRun " : true
+}

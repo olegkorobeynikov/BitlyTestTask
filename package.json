@@ -1,0 +1,25 @@
+{
+  "name": "bitlytesttaskpom",
+  "version": "1.0.0",
+  "description": "Smoke tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olegkorobeynikov/BitlyTestTaskPOM.git"
+  },
+  "author": "oleg korobeinikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olegkorobeynikov/BitlyTestTaskPOM/issues"
+  },
+  "homepage": "https://github.com/olegkorobeynikov/BitlyTestTaskPOM#readme",
+  "devDependencies": {
+    "cypress": "^9.6.1"
+  },
+  "dependencies": {
+    "jimp": "^0.16.1"
+  }
+}
