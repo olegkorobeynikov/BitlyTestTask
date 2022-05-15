@@ -2,7 +2,7 @@
 These are smoke tests for https://www.qrcode-monkey.com/
 
 ## Scenarios
-Since I don't have access to the site's metrics, I've selected what I think are the two most frequent scenarios for using the service to test critical functionality.
+Since I don't have access to the site's metrics, I've selected what I believe are two of the most frequent and critical scenarios of service use by users.
 
 Since the main value of the service is generation of QR codes, I decided to check the final QR code files.
 
