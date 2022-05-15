@@ -45,7 +45,7 @@ class MainPage {
             cy.get(downloadQRCodePngBtnLocator).click();
         }) 
 
-        cy.wait('@getQRFile', { "timeout":15000 });
+        cy.wait('@getQRFile', { "timeout" : 15000 });
     }
 }
 
