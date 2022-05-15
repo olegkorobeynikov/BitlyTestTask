@@ -24,7 +24,7 @@ Generate and download the QR code correctly when the URL is given
 As the browser chosen Chrome, as the most frequently used.
 
 ## Libraries used
-- I use the Jimp library for file comparison.
+- I use the [Jimp](https://github.com/oliver-moran/jimp#readme) library for file comparison.
 
 ## Other remarks and problems
 - Cypress has a [bug](https://github.com/cypress-io/cypress/issues/14857) and I use a [workaround](https://github.com/olegkorobeynikov/BitlyTestTaskPOM/blob/master/cypress/support/Pages/MainPage.js#L41) to solve it. It makes the tests take longer than they could. I could have chosen another assertion, for example comparing the request body when generating with the expected one. But then the tests wouldn't test the scenario honestly independently.
