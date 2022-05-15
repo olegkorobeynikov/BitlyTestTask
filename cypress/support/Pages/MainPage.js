@@ -34,7 +34,7 @@ class MainPage {
         this.elements.downloadQRCodePngBtn().click();
     }
 
-    clickDownloadQRCodeAndWaitIt() {
+    clickDownloadPngAndWaitIt() {
         cy.intercept('GET', 'https://api.qrcode-monkey.com//qr/custom?download?true*').as('getQRFile');
 
         // should remove that workaround after closing issue -> https://github.com/cypress-io/cypress/issues/14857

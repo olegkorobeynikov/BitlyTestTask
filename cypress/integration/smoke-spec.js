@@ -6,8 +6,8 @@ beforeEach( () => {
     cy.resetDownloadsFile()
 })
 
-describe('Smoke tests. Generate QR codes', () => {
-    it('Generate and save url qr code', () => {
+describe('Smoke tests. Correctly generate and download a QR code', () => {
+    it('when given a URL', () => {
         var urlPage = new UrlPage();
         urlPage.navigateToMain();
         
@@ -21,12 +21,12 @@ describe('Smoke tests. Generate QR codes', () => {
 
         urlPage.typeUrlText(testUrl);
         urlPage.clickCreateQRCode();
-        urlPage.clickDownloadQRCodeAndWaitIt();
+        urlPage.clickDownloadPngAndWaitIt();
 
         cy.checkDownloadQRCode('expected_url_qr_code.png');
     });
 
-    it.skip('Generate and save text qr code', () => {
+    it('when given TEXT', () => {
         var mainPage = new MainPage();
         mainPage.navigateToMain();
         mainPage.gotoTextPage();
@@ -35,7 +35,7 @@ describe('Smoke tests. Generate QR codes', () => {
         let allCharacters = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
         textPage.typeUrlText(allCharacters);
         textPage.clickCreateQRCode();
-        textPage.clickDownloadQRCodeAndWaitIt();
+        textPage.clickDownloadPngAndWaitIt();
 
         cy.checkDownloadQRCode('expected_text_qr_code.png');
     });
