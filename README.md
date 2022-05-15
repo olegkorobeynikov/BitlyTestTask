@@ -1,0 +1,2 @@
+# BitlyTestTaskPOM
+Smoke tests
