@@ -27,5 +27,6 @@ As the browser chosen Chrome, as the most frequently used.
 - I use the Jimp library for file comparison.
 
 ## Other remarks and problems
-- Cypress has a [bug](https://github.com/cypress-io/cypress/issues/14857) and uses a workaround to solve it. It makes the tests take longer than they could. I could have chosen another assertion, for example comparing the request body when generating with the expected one, but since I don't know how the service is structured inside, it was decided to test the whole custom script.
+- Cypress has a [bug](https://github.com/cypress-io/cypress/issues/14857) and I use a [workaround](https://github.com/olegkorobeynikov/BitlyTestTaskPOM/blob/master/cypress/support/Pages/MainPage.js#L41) to solve it. It makes the tests take longer than they could. I could have chosen another assertion, for example comparing the request body when generating with the expected one. But then the tests wouldn't test the scenario honestly independently.
 - The Jimp library gives uninformative errors if one (or both) of the files is empty or does not exist. But it is enough to spell the paths correctly once and the problem does not hurt.
+- The downloaded QR code is compared to the reference image. Maintaining and adding the expected images takes little time. QR codes are not expected to change externally very often. 
