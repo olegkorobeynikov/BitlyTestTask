@@ -2,7 +2,7 @@
 These are smoke tests for https://www.qrcode-monkey.com/
 
 ## Scenarios
-Since I don't have access to the site's metrics, I've selected what I believe are two of the most frequent and critical scenarios of service use by users.
+Since I don't have access to the site's metrics, I've selected what I believe are two of the most frequent and critical scenarios of service use by users. Also wthout metrics, it's hard to guess how often customization is used, but so far I haven't included it in the my smoke tests. But the architecture of the solution allows me to do so. 
 
 Since the main value of the service is generation of QR codes, I decided to check the final QR code files.
 
@@ -27,6 +27,7 @@ As the browser chosen Chrome, as the most frequently used.
 - I use the [Jimp](https://github.com/oliver-moran/jimp#readme) library for file comparison.
 
 ## Other remarks and problems
+- Since two images are compared I can be sure that QR works.
 - Cypress has a [bug](https://github.com/cypress-io/cypress/issues/14857) and I use a [workaround](https://github.com/olegkorobeynikov/BitlyTestTaskPOM/blob/master/cypress/support/Pages/MainPage.js#L41) to solve it. It makes the tests take longer than they could. I could have chosen another assertion, for example comparing the request body when generating with the expected one. But then the tests wouldn't test the scenario honestly independently.
 - The Jimp library gives uninformative errors if one (or both) of the files is empty or does not exist. But it is enough to spell the paths correctly once and the problem does not hurt.
 - The downloaded QR code is compared to the reference image. Maintaining and adding the expected images takes little time. QR codes are not expected to change externally very often. 
