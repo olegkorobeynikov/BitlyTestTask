@@ -2,9 +2,6 @@ const downloadQRCodePngBtnLocator = '#button-download-qr-code-png';
 
 class MainPage {
 
-    constructor() {
-    }
-
     elements = {
         urlTabBtn : () => cy.get("a[href='#url']"),
         textTabBtn : () => cy.get("a[href='#text']"),
